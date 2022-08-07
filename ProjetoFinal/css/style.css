@@ -1,3 +1,10 @@
+:root{
+    --cor1: #9753ea;
+    --cor2: #383838;
+    --cor3: white;
+    --cor4: black;
+}
+
 body{
     padding: 0;
     margin: 0;
@@ -8,77 +15,79 @@ body{
 .navbar{
     display: flex;
     justify-content: space-between;
-    background-color: #5715a8;
-    padding: 0 30px;
-    padding-top: 20px;
+    background-color: #383838;
+}
+
+.navbarlogo{
+    margin-left: 50px;
 }
 
 .navbarlogin{
     padding: 2px;
     margin: 30px;
-    border-radius: 40px;
 }
 
 .navbarlogin:hover{
-    background-color: white;
+    background-color: var(--cor1);
     border-radius: 40px;
-    transition: 1s;
+    transition: 0.3s;
+}
+
+.navbarlinks{
+    margin: 30px;
 }
 
 .navbarlinks a{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
     padding: 50px;
-    margin-top: 20px;
-    color: white;
     text-decoration: none;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
 }
 
 .navbarlinks a:visited{
-    color: white;
+    color: var(--cor3);
 }
 
 .navbarlinks a:hover{
-    color: black;
-    background-color: white;
+    background-color: var(--cor1);
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    transition: 1s;
-    
+    transition: 0.3s;   
 }
 
 /* botões de navegação das páginas */
 
 .paginas{
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: center;
+    padding: 40px;
 }
 
 .paginas button{
-    padding:  10px 40px;
-    margin: 15px;
-    background-color: #383838;
+    padding: 20px;
+    margin: auto;
+    background-color: var(--cor2);
     color: white;
     cursor: pointer;
-    border: solid 3px #383838; 
+    border: solid 3px var(--cor2); 
     border-radius: 10px;
     overflow: hidden;
 }
 
 .paginas button:hover{
-    background-color: #707070; 
-    border: solid #383838 3px;
+    background-color: var(--cor1); 
+    border: solid var(--cor2) 3px;
     transition: 0.5s;
 }
 
 .paginas a{
     padding: 140px;
-    color: white;
+    color: var(--cor3);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /* corpo de produtos */
@@ -87,34 +96,32 @@ body{
     display: flex;
     justify-content: space-around;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     grid-template-rows: auto auto auto;
 }
 
 .produto{
-    border: solid #383838 5px;
+    border: solid var(--cor2) 8px;
     text-align: center;
-    background-color: #383838;
-    margin: 20px;
+    margin: 30px;
 }
 
 .produto button{
     width: 140px;
-    padding: 15px;
+    padding: 15px ;
     text-align: center;
     cursor: pointer;
-    background-color: white;
+    background-color: var(--cor2);
     border: none;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .produto button:hover{
-    background-color: #707070;
-    text-shadow: 0 0 5px white;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    transition: 1s;
+    background-color: var(--cor1);
+    color:  var(--cor3);
+    border-radius: 20px;
+    transition: 0.3s;
 }
 
 /* informações das inst */
@@ -128,8 +135,220 @@ body{
 }
 
 .inst{
-    background-color: #383838;
-    border: solid black 2px;
+    background-color: var(--cor2);
+    border: solid var(--cor4) 2px;
     display: flex;
     margin: 20px;
+}
+
+.info-inst{
+    margin: 20px;
+    display: grid; 
+}
+
+.info-inst table{
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor1);
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* Produtos dentro do perfil */
+
+.corpo-perfil{
+    display: flex;
+    justify-content: space-between;
+}
+
+.produtos-add{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    margin: 0 auto;
+}
+
+.produto-perfil{
+    border: solid var(--cor2) 8px;
+    background-color: var(--cor2);
+    text-align: center;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.produto-perfil button{
+    width: 100%;
+    padding: 20px;
+    cursor: pointer;
+    background-color: #383838;
+    border: none;
+}
+
+.produto-perfil button:hover{
+    color: var(--cor3);
+    background: var(--cor1);
+    transition: 0.5s;
+}
+
+.add-produto{
+    border: solid var(--cor2) 8px;
+    text-align: center;
+    margin: auto;
+    padding: 80px 50px;
+    overflow: hidden;
+}
+
+.add-produto a{
+    margin: auto;
+    color: black;
+}
+
+.add-produto:hover{
+    background-color: var(--cor1);
+}
+
+.add-produto a:visited{
+    color: var(--cor4);
+}
+
+.perfil{
+    border: solid var(--cor2) 8px;
+    padding:200px;
+    margin: auto;
+    background-color: var(--cor2);
+    text-align: center;
+}
+
+/* Opções de perfil do usuário */
+
+.perfil-ops{
+    text-align: center;
+    background-color: var(--cor2);
+    padding: 100px;
+    margin: 0 20px;
+}
+
+.ops_user{
+    background-color: var(--cor2);
+    padding: 50px 100px;
+}
+
+.ops_user button{
+    border: none;
+    background-color: var(--cor2);
+    cursor: pointer;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.ops_user button:hover{
+    color: var(--cor3);
+}
+
+.corpo-ops_user{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+#btn-deletar{
+    margin: 20px 0;
+    border: solid red;
+    border-radius: 20px;
+    color: red;
+}
+
+#btn-deletar:hover{
+    background-color: var(--cor3);
+}
+
+
+/* página das redes sociais */
+
+.redes {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: var(--cor2);
+    padding: 50px;
+    margin: 0 20%;
+    border-radius: 20px;
+}
+
+.redes a {
+    background-color: var(--cor2);
+    margin: 30px;
+    padding: 30px;
+    font-size: 30px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: grid;   
+}
+
+.redes a:visited {
+    text-decoration: none;
+    color: var(--cor3);
+}
+
+.redes a:hover{
+    background-color: var(--cor1);
+    color: var(--cor4);
+    transition: 0.5s;
+}
+
+/* detalhes nossa história */
+
+.historia{
+    padding: 10px;
+    margin: 20px 130px;
+    text-align: center;
+    background-color: var(--cor2);
+    border-radius: 50px;
+    color: var(--cor3);
+}
+
+.historia p{
+    font-size: 30px;
+    background-color: var(--cor1);
+    color: var(--cor4);
+    border-radius: 50px;
+    margin: 20px 100px;
+    padding: 100px;
+}
+
+/* Detalhes contato */
+.email {
+    padding: 30px;
+    margin: 0 100px;
+    text-align: center;
+    background-color: var(--cor2);
+    color: var(--cor3);
+    border-radius: 20px;
+}
+
+.email h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--cor1);
+    color: var(--cor4);
+    padding: 30px;
+    margin: 0 100px;
+    border-radius: 20px;
+}
+
+.Cadastrar-produto{
+    text-align: center;
+    font-size: 30px;
+    padding: 20px 50px;
+    margin: 20px 20%;
+    border: solid 8px var(--cor2);
+}
+
+.Cadastrar-produto input{
+    margin: 20px 0;
+}
+
+.dados{
+    background-color: #383838;
+    text-align: center;
+    font-size: 50px;
 }
